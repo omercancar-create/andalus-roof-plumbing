@@ -840,6 +840,7 @@
     }
     .step-number {
       width: 64px; height: 64px;
+      min-width: 64px; min-height: 64px;
       border-radius: 50%;
       background: var(--navy-mid);
       border: 2px solid rgba(255,255,255,0.12);
@@ -850,6 +851,7 @@
       color: rgba(255,255,255,0.35);
       margin-bottom: 24px;
       transition: all 0.5s ease;
+      flex-shrink: 0;
     }
     .step-number.active {
       background: var(--blue);
@@ -1245,6 +1247,7 @@
       .process-line { display: none; }
       .process-step { flex-direction: row; text-align: left; align-items: flex-start; gap: 20px; }
       .process-step h3, .process-step p { text-align: left; }
+      .step-number { width: 52px; height: 52px; min-width: 52px; min-height: 52px; font-size: 17px; margin-bottom: 0; }
       .areas-grid { grid-template-columns: 1fr; }
       .areas-map { min-height: 300px; }
       .contact-grid { grid-template-columns: 1fr; }
@@ -1252,6 +1255,7 @@
     }
 
     @media (max-width: 768px) {
+      .hero-scroll-indicator { display: none; }
       .nav-links, .nav-phone, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .trust-inner { grid-template-columns: repeat(2, 1fr); }
